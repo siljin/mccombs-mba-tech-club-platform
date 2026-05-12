@@ -1,0 +1,22 @@
+name: Validate HTML
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required files exist
+        run: |
+          test -f index.html
+          test -f site.css
+          test -f site.js
+          grep -q 'href="site.css"' index.html
+          grep -q 'src="site.js"' index.html
+          grep -q '</html>' index.html

@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  # Static site — no install or build step required
+
+[[redirects]]
+  from = "/mba-tech-club.html"
+  to = "/"
+  status = 301
