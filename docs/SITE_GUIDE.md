@@ -9,6 +9,7 @@ Use this when you only need to change text, links, colors, or trivia. You can do
 | Change wording on the page, buttons, footer, or email links | `index.html` |
 | Change orange/dark colors, fonts, spacing, or how things look | `site.css` |
 | Change the Austin tech trivia cards | `site.js` (look for `triviaData`) |
+| Swap team headshots or initiative photos | Files in [`assets/`](../assets/) (see **Team and event photos** below) |
 
 ## Do and don’t
 
@@ -36,8 +37,13 @@ In `index.html`, search for the footer line containing `MBA Tech Club` and `McCo
 **Trivia**  
 In `site.js`, find the list `triviaData = [`. Each item looks like `{ q: "question", a: "answer" }`. Copy that pattern for new cards. Use `\"` inside a question if you need a double quote inside the text, or use single quotes on the outside.
 
-**Team photos**  
-Photos are embedded inside `index.html` as long lines (data URLs). Replacing them is easier if a technical helper exports a small image and swaps the `src="data:image/..."` value, or later moves images into an `assets/` folder.
+**Team and event photos**  
+Images live in the **`assets/`** folder:
+
+- **`team-01.png` … `team-10.png`** — Leadership and team headshots. Each `<img>` in `index.html` points at one of these (for example `src="assets/team-03.png"`). To replace a photo: upload a new image with the **same filename** (overwrite the file in `assets/`), or upload under a new name and change the matching `src="assets/..."` line in `index.html` next to that person’s name.
+- **`event-01.jpg`**, **`event-02.jpg`** — Photos on the Initiatives page. Same idea: replace the file or change the `src` in `index.html`.
+
+Use **square or roughly square** images for headshots when possible (they are shown in a circle). Keep file sizes reasonable (under ~500 KB each is a good target) so the site loads quickly.
 
 ## Fonts
 

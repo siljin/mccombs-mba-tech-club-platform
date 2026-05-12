@@ -15,6 +15,7 @@ The site is deployed on **Netlify** from this GitHub repository. After you merge
 | [`index.html`](index.html) | Page text, headings, links, team section markup |
 | [`site.css`](site.css) | Colors, fonts, spacing, layout |
 | [`site.js`](site.js) | Trivia questions/answers, page-switching behavior |
+| [`assets/`](assets/) | Team PNGs (`team-01.png` …) and initiative JPGs (`event-01.jpg`, …) |
 
 More detail: [`docs/SITE_GUIDE.md`](docs/SITE_GUIDE.md).
 
